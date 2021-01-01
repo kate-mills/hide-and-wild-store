@@ -9,12 +9,16 @@ import { CartProvider } from './src/context/cart_context'
 import { UserProvider } from './src/context/user_context'
 
 const auth_vars = {
-  domain: process.env.AUTH0_DOMAIN,
-  clientId: process.env.AUTH0_CLIENTID,
-  redirectUri:process.env.AUTH0_CALLBACK,
+  domain: process.env.GATSBY_AUTH0_DOMAIN,
+  clientId: process.env.GATSBY_AUTH0_CLIENTID,
+  redirectUri:process.env.GATSBY_AUTH0_CALLBACK,
   cacheLocation: "localstorage",
 };
 
+console.log('REDIRECT_URI:', auth_vars.redirectUri)
+if(auth_vars.redirectUri === undefined){
+  auth_vars['redirectUri'] = 'https://hideandwild.netlify.app'
+}
 console.log('REDIRECT_URI:', auth_vars.redirectUri)
 
 export const wrapRootElement = ({ element }) => {

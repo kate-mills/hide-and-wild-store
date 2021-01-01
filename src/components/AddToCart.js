@@ -28,7 +28,6 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
       return tempQuantity
     })
   }
-
   return (
     <Wrapper>
       <div className="colors">
@@ -58,7 +57,7 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           to="/cart"
 	        data-item-name={item.name}
           data-item-id={item.id}
-          data-item-url={"/"}
+          data-item-url={`/shop/${item.slug}`}
           data-item-max-quantity={item.stockQuantity}
           data-item-price={"" + item.price}
           data-item-image={item.images[0].fluid.src}

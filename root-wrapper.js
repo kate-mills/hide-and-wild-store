@@ -8,15 +8,14 @@ import { FilterProvider } from './src/context/filter_context'
 import { CartProvider } from './src/context/cart_context'
 import { UserProvider } from './src/context/user_context'
 
-
-const isBrowser = typeof window !== `undefined`
-
 const auth_vars = {
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENTID,
-  redirectUri: isBrowser && window.location.origin,
+  redirectUri:process.env.AUTH0_CALLBACK,
   cacheLocation: "localstorage",
 };
+
+console.log('REDIRECT_URI:', auth_vars.redirectUri)
 
 export const wrapRootElement = ({ element }) => {
   return (

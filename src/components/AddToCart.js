@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { FaCheck } from 'react-icons/fa'
-import { useCartContext } from '../context/cart_context'
+//import { useCartContext } from '../context/cart_context'
 import QuantityButtons from './QuantityButtons'
 
 const AddToCart = ({item, id, colors, stockQuantity}) => {
-  const {addToCart} = useCartContext()
+  //const {addToCart} = useCartContext()
   const [mainColor, setMainColor] = useState(colors[0])
   const [quantity, setQuantity] = useState(1)
 
@@ -59,9 +59,12 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           data-item-id={item.id}
           data-item-url={`/shop/${item.slug}`}
           data-item-max-quantity={item.stockQuantity}
-          data-item-price={"" + item.price}
+          data-item-price={parseFloat(item.price).toFixed(2)}
+          data-item-description={item.description.description}
           data-item-image={item.images[0].fluid.src}
-          onClick={()=>addToCart(id, mainColor, quantity, item)}
+          data-item-custom1-name="Color:"
+          data-item-custom1-type="readonly"
+          data-item-custom1-value={`${mainColor.toUpperCase()}`}
           className="btn snipcart-add-item"
         >add to cart</AniLink>
       </div>

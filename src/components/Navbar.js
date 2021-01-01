@@ -33,7 +33,7 @@ const Nav = () => {
           {
             myUser && (
               <li>
-                <AniLink fade to="/checkout">checkout</AniLink>
+                <AniLink className="snipcart-checkout" fade to="/checkout">checkout</AniLink>
               </li>
             )
           }

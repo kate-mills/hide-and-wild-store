@@ -36,7 +36,7 @@ const Sidebar = ({ handleClick }) => {
           {
             myUser && (
               <li>
-                <AniLink fade to="/checkout" onClick={closeSidebar}>
+                <AniLink fade to="/checkout" className="snipcart-checkout" onClick={closeSidebar}>
                   checkout
                 </AniLink>
               </li>

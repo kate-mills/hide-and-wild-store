@@ -14,19 +14,19 @@ const isBrowser = typeof window !== `undefined`
 const auth_vars = {
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENTID,
-  redirectUri: isBrowser && window.location.origin,
-  cacheLocation: "localstorage",
-};
+  redirectUri: process.env.AUTH0_REDIRECT_URI,
+}
+console.log(auth_vars.redirectUri)
+
+
+
+
+
 
 export const wrapRootElement = ({ element }) => {
   return (
     <>
-      <Auth0Provider
-        domain={auth_vars.domain}
-        clientId={auth_vars.clientId}
-        redirectUri={auth_vars.redirectUri}
-        cacheLocation={auth_vars.cacheLocation}
-      >
+      <Auth0Provider>
       <UserProvider>
         <ProductsProvider>
           <FilterProvider>

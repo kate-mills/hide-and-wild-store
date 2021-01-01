@@ -7,7 +7,6 @@ import QuantityButtons from './QuantityButtons'
 
 const AddToCart = ({item, id, colors, stockQuantity}) => {
   const {addToCart} = useCartContext()
-
   const [mainColor, setMainColor] = useState(colors[0])
   const [quantity, setQuantity] = useState(1)
 
@@ -57,8 +56,14 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
         <AniLink
           fade
           to="/cart"
+	        data-item-name={item.name}
+          data-item-id={item.id}
+          data-item-url={"/"}
+          data-item-max-quantity={item.stockQuantity}
+          data-item-price={"" + item.price}
+          data-item-image={item.images[0].fluid.src}
           onClick={()=>addToCart(id, mainColor, quantity, item)}
-          className="btn"
+          className="btn snipcart-add-item"
         >add to cart</AniLink>
       </div>
     </Wrapper>

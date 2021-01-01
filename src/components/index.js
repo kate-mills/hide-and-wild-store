@@ -18,8 +18,10 @@ import CartContent from './CarContent'
 import PageHero from './PageHero'
 import Layout from './layout'
 import SEO from './seo'
+import Checkout from './Checkout'
 
 export {
+  Checkout,
   SEO,
   Layout,
   FeaturedProducts,

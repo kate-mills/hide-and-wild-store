@@ -1,18 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { SEO, Layout, PageHero } from '../components'
-const CheckoutPage = () => {
+import React from "react"
+import { Router } from "@reach/router"
+import PrivateRoute from './PrivateRoute'
+
+const CheckoutApp = () => {
   return (
-    <Layout>
-      <SEO title="Checkout" />
-      <main>
-        <PageHero title="checkout" />"
-        <Wrapper className="page">
-          <h1>checkout here</h1>
-        </Wrapper>
-      </main>
-    </Layout>
+    <Router>
+      <PrivateRoute path="/checkout"/>
+    </Router>
   )
 }
-const Wrapper = styled.div``
-export default CheckoutPage
+
+export default CheckoutApp

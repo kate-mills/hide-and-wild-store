@@ -6,10 +6,11 @@ import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
-//import { useUserContext } from '../context/user_context'
+import { useUserContext } from '../context/user_context'
 
 const Nav = () => {
   const { openSidebar } = useProductsContext()
+  const {myUser} = useUserContext()
   return (
     <NavContainer>
       <div className="nav-center">
@@ -29,6 +30,13 @@ const Nav = () => {
               </li>
             )
           })}
+          {
+            myUser && (
+              <li>
+                <AniLink fade to="/checkout">checkout</AniLink>
+              </li>
+            )
+          }
         </ul>
         <CartButtons />
       </div>

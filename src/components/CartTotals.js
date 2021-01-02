@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
 import { formatWholePrice } from '../utils/helpers'
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 
 const CartTotals = () => {
   const {total_price, shipping_fee} = useCartContext()
-  const {myUser, loginWithRedirect} = useUserContext()
   return (
     <Wrapper>
       <div>
@@ -17,12 +15,7 @@ const CartTotals = () => {
           <hr/>
           <h4>Order total : <span>{formatWholePrice(total_price + shipping_fee)}</span></h4>
         </article>
-        {
-          myUser?
-            <AniLink fade to="/checkout" className="btn">proceed to checkout</AniLink>
-            :<button type="button" className="btn" onClick={loginWithRedirect}>Login</button>
-        }
-
+        <AniLink fade to="/checkout" className="btn snipcart-checkout">proceed to checkout</AniLink>
       </div>
     </Wrapper>
   )

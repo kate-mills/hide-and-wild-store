@@ -1,20 +1,17 @@
 import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
+import { FaShoppingCart} from 'react-icons/fa'
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import styled from 'styled-components'
 import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
 
 const CartButtons = () => {
   const {closeSidebar} = useProductsContext()
-  const {total_quantity} = useCartContext()
   return (
     <Wrapper className="cart-btn-wrapper">
       <AniLink fade to="/cart" className="cart-btn snipcart-checkout" onClick={closeSidebar}>
         Cart
         <span className="cart-container">
           <FaShoppingCart />
-          <span className="cart-value">{total_quantity}</span>
         </span>
       </AniLink>
     </Wrapper>
@@ -31,7 +28,6 @@ const Wrapper = styled.div`
     color: var(--clr-grey-1);
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-1);
     display: flex;
     align-items: center;
   }

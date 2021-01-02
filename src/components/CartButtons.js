@@ -1,19 +1,28 @@
 import React from 'react'
 import { FaShoppingCart} from 'react-icons/fa'
-import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import styled from 'styled-components'
 import { useProductsContext } from '../context/products_context'
+import { useSnipcartContext } from '../context/snipcart_context'
+
 
 const CartButtons = () => {
   const {closeSidebar} = useProductsContext()
+  const {setTotalCount, totalCount,  getSnipCount  } = useSnipcartContext()
+  
+  React.useEffect(()=>{
+    let newCount = getSnipCount()
+    setTotalCount(newCount)
+  }, [getSnipCount, setTotalCount])
+
   return (
     <Wrapper className="cart-btn-wrapper">
-      <AniLink fade to="/cart" className="cart-btn snipcart-checkout" onClick={closeSidebar}>
+      <button type="button" className="cart-btn snipcart-checkout" onClick={closeSidebar}>
         Cart
         <span className="cart-container">
           <FaShoppingCart />
+          <span className="cart-value snipcart-items-count">{totalCount}</span>
         </span>
-      </AniLink>
+      </button>
     </Wrapper>
   )
 }
@@ -25,11 +34,15 @@ const Wrapper = styled.div`
   width: 225px;
 
   .cart-btn {
+    outline: none;
+    border: none;
+    background: var(--clr-white);
     color: var(--clr-grey-1);
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   .cart-container {
     display: flex;

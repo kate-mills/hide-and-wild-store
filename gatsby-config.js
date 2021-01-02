@@ -10,12 +10,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-snipcart`,
+      resolve: `gatsby-plugin-snipcartv3`,
       options: {
         apiKey: process.env.GATSBY_SNIPCART_APIKEY,
-        styles: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css`,
-        js: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js`,
-        autopop: true,
+        //styles: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css`,
+        //js: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js`,
+        //autopop: true,
       },
     },
     {

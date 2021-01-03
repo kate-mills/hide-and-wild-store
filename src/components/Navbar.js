@@ -14,7 +14,7 @@ const Nav = () => {
       <div className="nav-center">
         <div className="nav-header">
           <AniLink fade to="/">
-            <img src={navlogo} alt="Hide & Wild Logo" />
+            <img src={navlogo} alt="Hide & Wild Logo" width="175px" height="54px" />
           </AniLink>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />

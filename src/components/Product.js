@@ -16,10 +16,9 @@ const Product = (props) => {
   return (
     <Wrapper>
       <div className="container">
-        <AniLink fade to={`/shop/${slug}`}>
-          <Image fluid={images[0].fluid} alt={description}/>
+        <AniLink fade to={`/shop/${slug}`}> <Image fluid={images[0].fluid} alt={description}/>
         </AniLink>
-        <AniLink fade to={`/shop/${slug}`} className="link"><FaSearch/></AniLink>
+        <AniLink fade to={`/shop/${slug}`} className="link" alt={`View ${description}`}><FaSearch/></AniLink>
       </div>
       <footer>
         <h5>{name.substring(0, 21)}...</h5>

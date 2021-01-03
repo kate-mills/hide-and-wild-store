@@ -5,9 +5,10 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     title: `Hide and Wild`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Hand cut designs made with love and natural elements by Hilary Molloy, in the beautiful Napa Valley.`,
     author: `kate-mills`,
     siteUrl: `https://hideandwild.netlify.app`,
+    theme_color: `#dfccc0`,
   },
   plugins: [
     {
@@ -42,7 +43,10 @@ module.exports = {
         theme_color: `#dfccc0`,
         display: `standalone`, //minimal-ui
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
-        icon_options: { purpose: `maskable` },
+        icon_options: {
+          purpose: `any maskable`,
+        },
+        crossOrigin: `use-credentials`,
       },
     },
     {

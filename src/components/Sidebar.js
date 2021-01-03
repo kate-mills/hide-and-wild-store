@@ -15,7 +15,7 @@ const Sidebar = ({ handleClick }) => {
         className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}
       >
         <div className="sidebar-header">
-          <img src={sidelogo} className="logo" alt="hide & wild logo" />
+          <img src={sidelogo} className="logo" alt="hide & wild logo" width="136px" height="45px"/>
           <button type="button" className="close-btn" onClick={closeSidebar}>
             <FaTimes />
           </button>

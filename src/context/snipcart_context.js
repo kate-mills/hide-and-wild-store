@@ -16,10 +16,8 @@ export const SnipcartProvider = ({ children }) => {
     if(checkWindow && window.Snipcart){
       const {cart: {items}} = window.Snipcart.store.getState()
       //setTotalCount(items.count)
-      console.log('COUNT:', items.count)
       return items.count
     }
-    console.log('NO WINDOW OR SNIPCART')
     return 0
   }
 

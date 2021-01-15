@@ -57,6 +57,7 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
 	        data-item-name={item.name}
           data-item-id={item.id}
           data-item-url={`/shop/${item.slug}`}
+          data-item-quantity={quantity}
           data-item-max-quantity={item.stockQuantity}
           data-item-price={parseFloat(item.price).toFixed(2)}
           data-item-description={item.description.description}
@@ -68,6 +69,7 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           onClick={()=>addToCart(id, mainColor, quantity, item )}
         >add to cart</AniLink>
       </div>
+      <div className="btn-container"><AniLink fade to="/cart" className="btn snipcart-checkout">checkout</AniLink></div>
     </Wrapper>
   )
 }
@@ -110,7 +112,14 @@ const Wrapper = styled.section`
     opacity: 1;
   }
   .btn-container {
+    display: inline;
     margin-top: 2rem;
+    a{
+      text-align: center;
+    }
+  }
+  .btn-container:nth-of-type(3) {
+    margin-left: 10px;
   }
 
   .btn {

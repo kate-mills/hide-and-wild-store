@@ -19,7 +19,7 @@ export const getUniqueValues = (items, filter, isArray=false) => {
     })
   )];
   if(isArray){
-    unique = unique.flat();
+    unique = [...new Set(unique.flat())];
   }
   return unique 
 }

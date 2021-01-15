@@ -17,7 +17,7 @@ const Filters = () => {
     updateFilters, clearFilters, all_items } = useFilterContext()
 
   const categories = getUniqueValues(all_items, 'category')
-  const colors = getUniqueValues(all_items, 'colors', {isArray: true})
+  const colors = getUniqueValues(all_items, 'colors', true)
 
   return (
     <Wrapper>

@@ -93,7 +93,6 @@ export const query = graphql`
       stars
       slug
       stockQuantity
-      wholePrice
     }
   }
 `

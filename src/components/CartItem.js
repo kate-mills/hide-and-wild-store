@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { formatWholePrice } from '../utils/helpers'
+import { formatPrice } from '../utils/helpers'
 import QuantityButtons from './QuantityButtons'
 import { FaTrash } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
 import Img from 'gatsby-image'
 
-const CartItem = ({id, image, name, color, wholePrice, quantity}) => {
+const CartItem = ({id, image, name, color, price, quantity}) => {
   const {removeItem, toggleQuantity} = useCartContext()
   const increase = () => {
     toggleQuantity(id, 'inc')
@@ -22,12 +22,12 @@ const CartItem = ({id, image, name, color, wholePrice, quantity}) => {
         <div>
           <h5 className="name">{name}</h5>
           <p className="color"> color :<span style={{background:color}}></span></p>
-          <h5 className="price-small">{formatWholePrice(wholePrice)}</h5>
+          <h5 className="price-small">{formatPrice(price)}</h5>
         </div>
       </div>
-      <h5 className="price">{formatWholePrice(wholePrice)}</h5> 
+      <h5 className="price">{formatPrice(price)}</h5> 
       <QuantityButtons quantity={quantity} increase={increase} decrease={decrease}/>
-      <h5 className='subtotal'>{formatWholePrice(wholePrice * quantity)}</h5>
+      <h5 className='subtotal'>{formatPrice(price * quantity)}</h5>
       <button type="button" className="remove-btn" onClick={()=>removeItem(id)}>
         <FaTrash/>
       </button>

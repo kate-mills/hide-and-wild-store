@@ -32,7 +32,6 @@ const cart_reducer = (state, action) => {
         color,
         quantity,
         image: item.images[0].fluid,
-        wholePrice: item.wholePrice,
         price: item.price,
         max: item.stockQuantity,
       }
@@ -75,9 +74,9 @@ const cart_reducer = (state, action) => {
 
   if(action.type === COUNT_CART_TOTALS){
     const {total_quantity, total_price} = state.cart.reduce((total, cartItem) => {
-      const { quantity, wholePrice } = cartItem
+      const { quantity, price } = cartItem
       total.total_quantity += quantity
-      total.total_price += (wholePrice * quantity)
+      total.total_price += (price * quantity)
       return total;
     }, {
       total_quantity: 0,

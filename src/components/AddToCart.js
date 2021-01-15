@@ -62,9 +62,12 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           data-item-price={parseFloat(item.price).toFixed(2)}
           data-item-description={item.description.description}
           data-item-image={item.images[0].fluid.src}
-          data-item-custom1-name="Color:"
+          data-item-custom1-name="Color"
           data-item-custom1-type="readonly"
           data-item-custom1-value={`${mainColor.toUpperCase()}`}
+          data-item-custom2-name="Limited Stock"
+          data-item-custom2-type="readonly"
+          data-item-custom2-value={`Total Available: ${item.stockQuantity}`}
           className="btn snipcart-add-item"
           onClick={()=>addToCart(id, mainColor, quantity, item )}
         >add to cart</AniLink>

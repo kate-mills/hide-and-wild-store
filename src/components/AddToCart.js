@@ -6,6 +6,8 @@ import { useCartContext } from '../context/cart_context'
 import QuantityButtons from './QuantityButtons'
 
 const AddToCart = ({item, id, colors, stockQuantity}) => {
+  const {images} = item
+  const data_image = `http:${images[0].fluid.src}`
   const {addToCart} = useCartContext()
   const [mainColor, setMainColor] = useState(colors[0])
   const [quantity, setQuantity] = useState(1)
@@ -62,7 +64,7 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           data-item-price={parseFloat(item.price).toFixed(2)}
           data-item-description={item.description.description}
           data-item-weight="10"
-          data-item-image={item.images[0].fluid.src}
+          data-item-image={data_image}
           data-item-custom1-name="Color"
           data-item-custom1-type="readonly"
           data-item-custom1-value={`${mainColor.toUpperCase()}`}

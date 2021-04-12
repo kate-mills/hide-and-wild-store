@@ -61,6 +61,7 @@ const AddToCart = ({item, id, colors, stockQuantity}) => {
           data-item-max-quantity={item.stockQuantity}
           data-item-price={parseFloat(item.price).toFixed(2)}
           data-item-description={item.description.description}
+          data-item-weight="10"
           data-item-image={item.images[0].fluid.src}
           data-item-custom1-name="Color"
           data-item-custom1-type="readonly"

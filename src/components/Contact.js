@@ -26,7 +26,7 @@ const Contact = () => {
               name="name"
               id="name"
               className="form-input"
-              placeholder="Name"
+              placeholder="Your Name"
               required
             />
             <input
@@ -34,7 +34,7 @@ const Contact = () => {
               name="email"
               id="email"
               className="form-input"
-              placeholder="Email"
+              placeholder="Your Email"
               required
             />
             <input
@@ -42,14 +42,14 @@ const Contact = () => {
               name="phone"
               id="phone"
               className="form-input"
-              placeholder="Phone"
+              placeholder="Your Phone"
             />
             <input
               type="text"
               name="insta"
               id="insta"
               className="form-input"
-              placeholder="Instagram Handle"
+              placeholder="@your_instagram"
             />
             <textarea
               name="message"

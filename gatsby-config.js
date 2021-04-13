@@ -55,8 +55,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://hideandwild.netlify.app',
-        sitemap: 'https://hideandwild.netlify.app/sitemap.xml',
+        host: 'https://hideandwild.com',
+        sitemap: 'https://hideandwild.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

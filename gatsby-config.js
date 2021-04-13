@@ -7,7 +7,7 @@ module.exports = {
     title: `Hide and Wild`,
     description: `Hand cut designs made with love and natural elements by Hilary Molloy, in the beautiful Napa Valley.`,
     author: `kate-mills`,
-    siteUrl: `https://hideandwild.netlify.app`,
+    siteUrl: `https://hideandwild.com`,
     theme_color: `#dfccc0`,
   },
   plugins: [

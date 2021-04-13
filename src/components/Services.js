@@ -9,9 +9,9 @@ const Services = () => {
         <article className="header">
           <h3>
             Some of our favorite
-            <br />jewelry tips revealed!
+            <br />tips revealed!
           </h3>
-          <p>Hilza, maybe some fun ways you recommend storing, cleaning, wearing, not wearing your jewelry items. </p>
+          <p>It's coming soon. Some easy ways Hilary recommends storing, cleaning, and sharing her pieces.</p>
         </article>
         <div className="services-center">
           {services.map(service => {
@@ -34,6 +34,7 @@ const Wrapper = styled.section`
   h4 {
     color: var(--clr-primary-1);
   }
+  h3{ line-height: 2.6rem; }
   padding: 5rem 0;
 
   background: var(--clr-primary-10);

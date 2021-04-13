@@ -25,21 +25,21 @@ export const services = [
     icon: <GiPrayerBeads />,
     title: 'SHINE',
     text:
-      'Make your own DIY Cleaner!  I am just making this up, Hil. And maybe a little recipe.',
+      'Coming Soon!',
   },
   {
     id: 2,
     icon: <GiPowerRing />,
-    title: 'STORE',
+    title: 'KEEP',
     text:
-      'My favorite way to store earrings is ...blah. Or, wrap in a microfiber cloth. Again, just making this up.',
+      'Coming Soon!',
   },
   {
     id: 3,
     icon: <GiEarrings />,
     title: 'GIFTS',
     text:
-      'Sizing can be difficult, but we sell gift certificates!! And, everyone loves one of those! Something else here... Not this.',
+      'Coming Soon!',
   },
 ]
 

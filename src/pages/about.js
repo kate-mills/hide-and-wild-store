@@ -36,7 +36,7 @@ const AboutPage = () => {
             </div>
             <p>
               Hand cut designs made with love and natural elements by yours
-              truly, in the beautiful Napa Valley. *coming soon* hideandwild.com
+              truly, in the beautiful Napa Valley.
             </p>
           </article>
         </Wrapper>

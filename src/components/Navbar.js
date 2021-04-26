@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import navlogo from '../images/nav-logo2.png'
+import navlogo from '../images/Hide + Wild.png'
 import { FaBars } from 'react-icons/fa'
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { links } from '../utils/constants'
@@ -56,14 +56,6 @@ const NavContainer = styled.nav`
     img {
       width: 175px;
       margin-left: -15px;
-    }
-    .necklace {
-      height: 50px;
-      background: transparent;
-      position: relative;
-      right: 25px;
-      stroke: hsl(22, 31%, 60%);
-      stroke-width: 13px;
     }
   }
   .nav-toggle {

@@ -1,5 +1,6 @@
 import React from 'react'
-import sidelogo from '../images/sidebar-logo.png'
+import sidelogo from '../images/Hide + Wild.png'
+
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { useProductsContext } from '../context/products_context'
 import { FaTimes } from 'react-icons/fa'

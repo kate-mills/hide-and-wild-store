@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export const query = graphql`
   {
-    fashion: file(relativePath: { eq: "index-hero.png" }) {
+    fashion: file(relativePath: { eq: "hilary-orange-earring.JPG" }) {
       childImageSharp {
         fluid(cropFocus: SOUTHWEST, fit: CONTAIN){
           ...GatsbyImageSharpFluid
@@ -68,8 +68,12 @@ const Wrapper = styled.section`
       font-size: 1.25rem;
     }
     .hero-btn {
+      background: black;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
+    }
+    .hero-btn:hover{
+      color: silver;
     }
     .img-container {
       width: 100%;

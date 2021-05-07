@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "fashion.jpg" }) {
+    img: file(relativePath: { eq: "hilary-orange-earring.JPG" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -25,10 +25,6 @@ const AboutPage = () => {
       <main>
         <PageHero title="about" />
         <Wrapper className="page section section-center">
-          <Image
-            fluid={img.childImageSharp.fluid}
-            alt="Right profile of woman wearing Hide and Wild earrings. She has her eyes closed and head tilted back."
-          />
           <article>
             <div className="title">
               <h2>About Hilary's Designs</h2>
@@ -39,6 +35,7 @@ const AboutPage = () => {
               truly, in the beautiful Napa Valley.
             </p>
           </article>
+          <Image fluid={img.childImageSharp.fluid} alt="Right profile of woman wearing Hide and Wild earrings. She has her eyes closed and head tilted back." />
         </Wrapper>
       </main>
     </Layout>

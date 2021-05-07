@@ -21,7 +21,7 @@ const AboutPage = () => {
   const { img } = useStaticQuery(query)
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About Hide & Wild" />
       <main>
         <PageHero title="about" />
         <Wrapper className="page section section-center">

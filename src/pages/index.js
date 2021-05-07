@@ -10,7 +10,7 @@ import {
 const HomePage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Hide & Wild" />
       <main>
         <Hero />
         <FeaturedProducts />

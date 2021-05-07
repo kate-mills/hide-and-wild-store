@@ -13,7 +13,7 @@ const ProductsPage = () => {
   return (
     <Layout>
       <SEO
-        title="Shop Jewelry"
+        title="Hide & Wild Shop"
         description="Shop all of our hand cut designs that Hilary Molloy makes with love and natural elements in the beautiful Napa Valley."
       />
       <main>

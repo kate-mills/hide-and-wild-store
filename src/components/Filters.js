@@ -146,7 +146,7 @@ const Wrapper = styled.section`
   }
   .search-input {
     padding: 0.5rem;
-    background: var(--clr-grey-10);
+    background:#F5F5F5;
     border-radius: var(--radius);
     border-color: transparent;
     letter-spacing: var(--spacing);

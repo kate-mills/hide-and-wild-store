@@ -31,9 +31,9 @@ const CartButtons = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: .8fr 1fr;
   align-items: center;
-  width: 225px;
+  width: 255px;
   .skincare{
     color: var(--clr-black);
     letter-spacing: var(--spacing);
@@ -59,7 +59,7 @@ const Wrapper = styled.div`
     position: relative;
     svg {
       height: 1.6rem;
-      margin-left: 5px;
+      margin-left: 2px;
     }
   }
   .cart-value {

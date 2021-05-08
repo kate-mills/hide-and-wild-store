@@ -9,7 +9,7 @@ export const query = graphql`
   {
     img: file(relativePath: { eq: "hilary-orange-earring.JPG" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 500, maxHeight:500,cropFocus: SOUTHWEST) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -35,7 +35,7 @@ const AboutPage = () => {
               truly, in the beautiful Napa Valley.
             </p>
           </article>
-          <Image fluid={img.childImageSharp.fluid} alt="Right profile of woman wearing Hide and Wild earrings. She has her eyes closed and head tilted back." />
+          <Image fluid={img.childImageSharp.fluid} alt="Left profile of Hilary Molloy wearing orange Hide and Wild earrings. She has her eyes open and looking forward." />
         </Wrapper>
       </main>
     </Layout>
@@ -52,6 +52,9 @@ const Wrapper = styled.section`
     height: 500px;
     min-height: 500px;
     object-fit: cover;
+    img{
+      object-position: left !important;
+    }
   }
   p {
     line-height: 2;

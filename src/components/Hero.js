@@ -8,7 +8,7 @@ export const query = graphql`
   {
     fashion: file(relativePath: { eq: "hilary-orange-earring.JPG" }) {
       childImageSharp {
-        fluid(cropFocus: SOUTHWEST, fit: CONTAIN){
+        fluid(maxWidth: 500, maxHeight:500,cropFocus: SOUTHWEST) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -48,7 +48,7 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
-  .img-container { display: none; }
+  .img-container { display: relative; }
 
   p {
     line-height: 2;
@@ -85,8 +85,10 @@ const Wrapper = styled.section`
       height: 550px;
       position: relative;
       border-radius: var(--radius);
-      object-fit: contain;
       display: block;
+      img{
+        object-position: left !important;
+      }
     }
     .gatsby-image-wrapper img{
       object-fit: contain;
@@ -102,11 +104,13 @@ const Wrapper = styled.section`
     .img-container::before {
       content: '';
       position: absolute;
-      width: 0%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
       border-radius: var(--radius);
+      width: 100%;
+      height: 100%;
+      border: 3px solid black;
+      box-sizing: border-box;
+      top: -16px;
+      right: 68px;
     }
   }
 `

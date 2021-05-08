@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaShoppingCart} from 'react-icons/fa'
+import {HiSparkles} from 'react-icons/hi'
 import styled from 'styled-components'
 import { useProductsContext } from '../context/products_context'
 import { useSnipcartContext } from '../context/snipcart_context'
@@ -16,6 +17,8 @@ const CartButtons = () => {
 
   return (
     <Wrapper className="cart-btn-wrapper">
+      
+
       <button type="button" className="cart-btn snipcart-checkout" onClick={closeSidebar}>
         Cart
         <span className="cart-container">
@@ -23,15 +26,34 @@ const CartButtons = () => {
           <span className="cart-value snipcart-items-count">{totalCount}</span>
         </span>
       </button>
+
+      <a className="skincare" href="https://skincarebyhilary.app">
+        Skin
+        <span className="skincare-icon">
+          <HiSparkles/>
+        </span>
+      </a>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   align-items: center;
-  width: 225px;
+  width: 255px;
+  .skincare{
+    color: var(--clr-black);
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: var(--spacing);
+    .skincare-icon{
+      svg{
+        margin-left: 2px;
+      }
+    }
+  }
 
   .cart-btn {
     outline: none;

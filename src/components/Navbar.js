@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import navlogo from '../images/Hide + Wild.png'
+import navlogo from '../images/Hide.png'
 import { FaBars } from 'react-icons/fa'
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { links } from '../utils/constants'

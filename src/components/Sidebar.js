@@ -1,5 +1,5 @@
 import React from 'react'
-import sidelogo from '../images/Hide + Wild.png'
+import sidelogo from '../images/Hide.png'
 
 import AniLink from "gatsby-plugin-transition-link/AniLink/Fade"
 import { useProductsContext } from '../context/products_context'
